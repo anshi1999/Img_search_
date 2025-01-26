@@ -6,7 +6,7 @@ let load=document.querySelector("#load")
 
 
 
-const accessKey="9J2wg66lL5oNqKAVbGprp4WJVYwAN-6KaXP09f_4ang"
+const accessKey="BLp2-X62ZMkjwJmOgdbwkW_38olLyrrTGTosTOKrEWg"
 let page=1;
 let keyword=""
 function download(imgurl){
@@ -25,6 +25,7 @@ async function getResponse() {
    
     keyword=input.value
     let url=`https://api.unsplash.com/search/collections?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`
+
     let response=await fetch(url);
     let data=await response.json()
     let results=data.results;
